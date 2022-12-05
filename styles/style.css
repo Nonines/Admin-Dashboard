@@ -5,6 +5,15 @@
     /* outline: 1px solid lightcoral; */
 }
 
+:root {
+    --color-white: #fff;
+    --color-spanish-gray: #9E9F9F;
+    --color-quick-silver: #A3A09D;
+    --color-alice-blue: #e3e9f0;
+    --color-blue-crayola: #1293D5;
+    --color-orange-yellow: #F0B524;
+}
+
 [src$='.svg'] {
     width: 20px;
     height: 20px;
@@ -43,6 +52,9 @@ header {
     grid-template-columns: 2fr 1fr;
     grid-auto-rows: 1fr;
     row-gap: 10px;
+
+    position: relative;
+    box-shadow: 0px 0px 7px 2px var(--color-quick-silver);
 }
 
 aside {
@@ -54,7 +66,8 @@ aside {
     display: grid;
     grid-template-rows: 1fr 3fr 2fr;
 
-    background-color: lightblue;
+    background-color: var(--color-blue-crayola);
+    color: var(--color-white);
 }
 
 main {
@@ -66,7 +79,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
 
-    background-color: lightseagreen;
+    background-color: var(--color-alice-blue);
 }
 
 header .search {
@@ -80,7 +93,7 @@ header .search div {
     height: 30px;
     width: min(500px, 100%);
     border-radius: 14px;
-    background-color: aquamarine;
+    background-color: var(--color-alice-blue);
 }
 
 header .profile {
@@ -88,6 +101,8 @@ header .profile {
     grid-template-columns: repeat(2, 1fr) 2fr;
     align-items: center;
     justify-items: center;
+
+    font-weight: bolder;
 }
 
 header .user-info {
@@ -95,6 +110,16 @@ header .user-info {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 20px;
+
+    font-weight: bolder;
+}
+
+header .user-info p:first-child {
+    font-size: smaller;
+}
+
+header .user-info p:last-child {
+    font-size: larger;
 }
 
 header .buttons {
@@ -102,13 +127,18 @@ header .buttons {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
+    gap: 8px;
 }
 
 header .buttons button {
-    width: 80px;
+    width: min(100%, 118px);
     height: 40px;
+    border: none;
     border-radius: 20px;
+    background-color: var(--color-blue-crayola);
+    color: var(--color-white);
 }
+
 main .projects {
     grid-column-start: 1;
     grid-column-end: 2;
