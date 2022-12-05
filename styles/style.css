@@ -30,11 +30,12 @@ ul {
 }
 
 body {
+    min-height: 100vh;
     height: auto;
     width: 100%;
 
     display: grid;
-    grid-template-columns: minmax(150px, 1fr) 4fr;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
     grid-template-rows: 150px 4fr;
 }
 
@@ -64,10 +65,11 @@ aside {
     grid-row-end: 3;
 
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 50px 1fr;
 
     background-color: var(--color-blue-crayola);
     color: var(--color-white);
+    font-weight: bold;
 }
 
 main {
@@ -137,6 +139,29 @@ header .buttons button {
     border-radius: 20px;
     background-color: var(--color-blue-crayola);
     color: var(--color-white);
+}
+
+aside > :first-child {
+    font-size: 20px;
+}
+
+aside .menus {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 50px;
+
+    font-size: 15px;
+}
+
+aside .menus li {
+    padding-bottom: 10px;
+}
+
+aside > :first-child, aside .menus li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content auto;
+    gap: 10px;
 }
 
 main .projects {
