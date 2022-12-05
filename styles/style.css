@@ -7,7 +7,7 @@
 
 :root {
     --color-white: #fff;
-    --color-spanish-gray: #9E9F9F;
+    --color-brown: #424242;
     --color-quick-silver: #A3A09D;
     --color-alice-blue: #e3e9f0;
     --color-blue-crayola: #1293D5;
@@ -80,6 +80,7 @@ main {
 
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 20px;
 
     background-color: var(--color-alice-blue);
 }
@@ -171,10 +172,43 @@ main .projects {
     grid-row-end: 2;
 }
 
+main .projects p {
+    margin-bottom: 10px;
+}
+
+main .projects p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 main .projects .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 150px;
+    grid-auto-rows: 200px;
+    gap: 20px;
+}
+
+main .project-card {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 8px solid var(--color-orange-yellow);
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+main .project-card > ul {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    gap: 15px;
+}
+
+main .project-card p + p {
+    font-size: 15px;
+    color: var(--color-brown);
+    overflow: auto;
 }
 
 main .side-content {
