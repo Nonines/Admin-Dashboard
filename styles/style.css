@@ -213,6 +213,17 @@ main .project-card p + p {
 
 main .side-content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: repeat(3, max-content);
+    gap: 10px;
+}
+
+main .side-content > div {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+main .side-content > p {
+    font-weight: bold;
+    font-size: 20px;
 }
