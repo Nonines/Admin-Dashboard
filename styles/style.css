@@ -10,7 +10,7 @@
     height: 20px;
 }
 
-[src$='.jpg'] {
+[src$='.jpg'], [src$='.jpeg'] {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -22,10 +22,15 @@ ul {
 
 body {
     height: auto;
+    width: 100%;
 
     display: grid;
     grid-template-columns: minmax(150px, 1fr) 4fr;
     grid-template-rows: 150px 4fr;
+}
+
+body > * {
+    padding: 20px;
 }
 
 header {
@@ -37,6 +42,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-auto-rows: 1fr;
+    row-gap: 10px;
 }
 
 aside {
@@ -47,6 +53,8 @@ aside {
 
     display: grid;
     grid-template-rows: 1fr 3fr 2fr;
+
+    background-color: lightblue;
 }
 
 main {
@@ -57,17 +65,20 @@ main {
 
     display: grid;
     grid-template-columns: 3fr 1fr;
+
+    background-color: lightseagreen;
 }
 
 header .search {
     display: grid;
     grid-template-columns: min-content auto;
     align-items: center;
+    gap: 10px;
 }
 
 header .search div {
     height: 30px;
-    width: 100%;
+    width: min(500px, 100%);
     border-radius: 14px;
     background-color: aquamarine;
 }
@@ -83,6 +94,7 @@ header .user-info {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    gap: 20px;
 }
 
 header .buttons {
@@ -92,6 +104,11 @@ header .buttons {
     justify-items: center;
 }
 
+header .buttons button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
 main .projects {
     grid-column-start: 1;
     grid-column-end: 2;
