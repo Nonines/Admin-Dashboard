@@ -16,6 +16,10 @@
     border-radius: 50%;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     height: auto;
 
@@ -40,6 +44,9 @@ aside {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
 }
 
 main {
@@ -47,6 +54,9 @@ main {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 header .search {
@@ -80,4 +90,23 @@ header .buttons {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
+}
+
+main .projects {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+main .projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 150px;
+}
+
+main .side-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }
