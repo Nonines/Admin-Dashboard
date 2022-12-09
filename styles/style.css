@@ -173,7 +173,7 @@ main .projects {
     grid-row-end: 2;
 }
 
-main .projects p {
+main .projects p, main .side-content > div > p {
     margin-bottom: 10px;
 }
 
@@ -214,6 +214,35 @@ main .project-card p + p {
 
 main .side-content {
     display: grid;
+    grid-template-rows: calc(436px / 2) calc(436px / 2);
+    grid-template-columns: minmax(auto, 1fr);
+    gap: 20px;
+
+    font-size: 15px;
+    overflow: hidden;
+}
+
+main .side-content > div {
+    overflow-y: auto;
+}
+
+main .side-content > div::-webkit-scrollbar {
+    display: none;
+}
+
+main .side-content > div > p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+main .side-content > div > ul {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* main .side-content {
+    display: grid;
     grid-template-rows: min-content 1fr min-content 1fr;
     gap: 10px;
 }
@@ -248,4 +277,4 @@ main .side-content li p:last-child {
 
 main .side-content .announce li {
     border-bottom: 1px solid var(--color-quick-silver);
-}
+} */
