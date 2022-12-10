@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    /* outline: 1px solid lightcoral; */
 }
 
 :root {
@@ -12,7 +11,7 @@
     --color-alice-blue: #e3e9f0;
     --color-blue-crayola: #1293D5;
     --color-orange-yellow: #F0B524;
-    --color-black: rgb(12, 12, 12);
+    --color-black: #0c0c0c;
 }
 
 [src$='.svg'] {
@@ -24,6 +23,20 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+a, a:link, a:visited {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    transform: scale(0.8);
+    text-decoration: none;
 }
 
 ul {
@@ -145,6 +158,14 @@ header .buttons button {
     color: var(--color-white);
 }
 
+header .buttons button:hover {
+    color: var(--color-brown);
+}
+
+header .buttons button:active {
+    color: var(--color-black);
+}
+
 aside > :first-child {
     font-size: 20px;
 }
@@ -184,6 +205,10 @@ main .projects p:first-child {
     font-size: 20px;
 }
 
+main .projects p:first-child:hover {
+    text-decoration: underline;
+}
+
 main .projects .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -219,6 +244,11 @@ main .side-content {
     grid-template-rows: 454px;
 }
 
+main .side-content ul p:first-of-type {
+    font-weight: bold;
+    color: var(--color-black);
+}
+
 main .side-content .announce {
     margin-bottom: 20px;
 
@@ -236,6 +266,10 @@ main .sc-box :is(.announce, .trending) > p {
     font-size: 20px;
 }
 
+main .sc-box :is(.announce, .trending) p:hover {
+    text-decoration: underline;
+}
+
 main .sc-box :is(.announce, .trending) ul {
     background-color: var(--color-white);
     border-radius: 8px;
@@ -249,11 +283,6 @@ main .sc-box :is(.announce, .trending) ul > :not(li:last-child) {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--color-quick-silver);
-}
-
-main ul p:first-of-type {
-    font-weight: bold;
-    color: var(--color-black);
 }
 
 main .side-content .sc-box .trending ul > li {
